@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+   <div>
+    <input type="text" placeholder="First Name" id="firstName" />
+    <input type="text" placeholder="Last Name" id="lastName" />
+    <input type="text" placeholder="Password" id="password" />
+    <input type="text" placeholder="Gmail" id="gmail" />
+
+    <input type="text" placeholder="Password re eneter" id="passwordReEnter" />
+   </div> 
+   <br>
+   <button onclick="formvalid()"> submit </button>
+   <script> 
+
+function formvalid() {
+    const firstName =document.getElementById("firstName").value
+    const lastName =document.getElementById("lastName").value
+    const password =document.getElementById("password").value
+    const gmail =document.getElementById("gmail").value
+
+    const passwordReEnter =document.getElementById("passwordReEnter").value
+    console.log(firstName,lastName,password, passwordReEnter,gmail)
+    if( firstName === "")
+    {
+        alert ("firstName must be filled")
+        return false
+    } 
+    if( lastName === "")
+    {
+        alert ("lastName must be filled")
+        return false
+    } 
+    if( gmail === "")
+    {
+        alert ("firstName must be filled")
+        return false
+    } 
+    if( password.length<6)
+    {
+        alert ("password should be more than six")
+        return false
+    } 
+    if( passwordReEnter !== password)
+    {
+        alert ("password doesnot match")
+        return false
+    } 
+        return true
+   }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
